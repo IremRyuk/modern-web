@@ -1,0 +1,164 @@
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+$liColor:#2a2a2a;
+$titleColor:#00ffc4;
+$categoryColor:#007cfb;
+.home{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #262626;
+}
+// navigation menu
+ul{
+    width: 20%;
+    position: relative;
+    transform: skewY(-17deg);
+    // border: 2px solid green;
+    opacity: 0;
+    transition: 0.4s;
+}
+ul li{
+    position: relative;
+    width: 70%;
+    list-style: none;
+    background: $liColor;
+    padding: 15px;
+    padding-left: 10%;
+    transition: 0.4s;
+    z-index: var(--i);
+}
+ul li:hover{
+    background: $titleColor;
+    cursor: pointer;
+    transform: translateX(-25%)
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: $liColor;
+    transform-origin: right;
+transform: skewY(45deg);
+transition: 0.4s;
+}
+ul li:hover::before{
+    background-color: $titleColor;
+}
+ul li::after{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0%;
+    width: 100%;
+    height: 40px;
+    background: $liColor;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.4s;
+}
+ul li:hover:after{
+    background-color: $titleColor;
+}
+ul li:last-child:after{
+    box-shadow: -110px 110px 15px rgba(0, 0, 0, 0.5);
+}
+ul li a{
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.4s;
+}
+ul li:hover a{
+    color: black;
+}
+// welcome title
+.right{
+    width: 40%;
+    height: 50%;
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    position: relative;
+    .title1{
+        position: absolute;
+        top: 0%;
+        left: -50%;
+        opacity: 0;
+        color: $titleColor;
+    }
+    .title2{
+        position: absolute;
+        top: 25%;
+        left: -50%;
+        opacity: 0;
+        color: $titleColor;
+    }
+    .title3{
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        left: -50%;
+        opacity: 0;
+        color: $titleColor;
+    }
+}
+@keyframes titleAnimation{
+    0%{
+        text-shadow:0px 0px 0px;
+    }
+    50%{
+        text-shadow:0px 0px 10px;
+    }
+    100%{
+        text-shadow:0px 0px 0px;
+    }
+}
+// animation cart
+.cart{
+    position: absolute;
+    background-image: url('./cart.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    bottom: 0%;
+    left: 20%;
+    // transition: 10s ease;
+    animation:20s cartanime infinite;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    // padding: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover{
+        scale: 1.3;
+    }
+}
+@keyframes cartanime{
+    0%{
+        left: 10%;
+        transform: rotateY(0deg);
+    }
+    50%{
+        left: 90%;
+    }
+    100%{
+        left: 10%;
+        transform: rotateY(180deg);
+    }
+}
