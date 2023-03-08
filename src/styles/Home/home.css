@@ -1,7 +1,21 @@
 * {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffc4;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2a2a2a;
 }
 
 .home {
@@ -11,6 +25,87 @@
   width: 100vw;
   height: 100vh;
   background: #262626;
+}
+
+.mini-nav {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register {
+  margin-right: 5%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.registerBtn {
+  border: none;
+  font-size: x-large;
+  background: #2a2a2a;
+  color: #00ffc4;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.logLeft {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-radius: 2.4mm;
+}
+.logLeft:hover {
+  color: black;
+  background: #007cfb;
+  box-shadow: 0px 0px 20px #007cfb;
+}
+
+.logRight {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-radius: 2.4mm;
+}
+.logRight:hover {
+  color: black;
+  background: red;
+  box-shadow: 0px 0px 20px red;
+}
+
+.showLog {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+}
+
+.showSign {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+}
+
+.headers {
+  color: #00ffc4;
+  text-decoration: none;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin-left: 5%;
+  transition: 0.4s;
+  z-index: 20;
+  opacity: 0;
 }
 
 ul {
@@ -26,8 +121,7 @@ ul li {
   width: 70%;
   list-style: none;
   background: #2a2a2a;
-  padding: 15px;
-  padding-left: 10%;
+  padding: 15px 15px 15px 10%;
   transition: 0.4s;
   z-index: var(--i);
 }
@@ -41,7 +135,7 @@ ul li:hover {
 ul li::before {
   content: "";
   position: absolute;
-  top: 0%;
+  top: 0;
   left: -40px;
   width: 40px;
   height: 100%;
@@ -59,7 +153,7 @@ ul li::after {
   content: "";
   position: absolute;
   top: -40px;
-  left: 0%;
+  left: 0;
   width: 100%;
   height: 40px;
   background: #2a2a2a;
@@ -102,7 +196,7 @@ ul li:hover a {
 }
 .right .title1 {
   position: absolute;
-  top: 0%;
+  top: 0;
   left: -50%;
   opacity: 0;
   color: #00ffc4;
@@ -117,7 +211,6 @@ ul li:hover a {
 .right .title3 {
   position: absolute;
   top: 50%;
-  left: 0%;
   left: -50%;
   opacity: 0;
   color: #00ffc4;
@@ -125,34 +218,61 @@ ul li:hover a {
 
 @-webkit-keyframes titleAnimation {
   0% {
-    text-shadow: 0px 0px 0px;
+    text-shadow: 0 0 0;
   }
   50% {
-    text-shadow: 0px 0px 10px;
+    text-shadow: 0 0 10px;
   }
   100% {
-    text-shadow: 0px 0px 0px;
+    text-shadow: 0 0 0;
   }
 }
 
 @keyframes titleAnimation {
   0% {
-    text-shadow: 0px 0px 0px;
+    text-shadow: 0 0 0;
   }
   50% {
-    text-shadow: 0px 0px 10px;
+    text-shadow: 0 0 10px;
   }
   100% {
-    text-shadow: 0px 0px 0px;
+    text-shadow: 0 0 0;
   }
 }
+.shopbtn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -95%);
+  z-index: 50;
+  border: 2px solid #00ffc4;
+  padding: 10px 70px;
+  color: #00ffc4;
+  font-size: xx-large;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+  border-radius: 2.4mm;
+  opacity: 0;
+}
+.shopbtn:hover {
+  background-color: #00ffc4;
+  padding: 10px 80px;
+  box-shadow: 0px 0px 20px #00ffc4;
+  color: black;
+}
+.shopbtn:active {
+  border-color: #00b98e;
+  background-color: #00b98e;
+}
+
 .cart {
   position: absolute;
   background-image: url("./cart.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  bottom: 0%;
+  bottom: 5%;
   left: 20%;
   -webkit-animation: 20s cartanime infinite;
           animation: 20s cartanime infinite;

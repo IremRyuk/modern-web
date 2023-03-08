@@ -1,0 +1,119 @@
+::-moz-placeholder {
+  color: silver;
+}
+
+:-ms-input-placeholder {
+  color: silver;
+}
+
+::placeholder {
+  color: silver;
+}
+
+.login {
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  z-index: 50;
+  transform: translate(-50%, -70%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #2a2a2a;
+  padding: 5px;
+  border: 7px solid #00ffc4;
+  border-radius: 7.4mm;
+}
+
+.signup {
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  z-index: 50;
+  transform: translate(-50%, -70%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #2a2a2a;
+  padding: 5px;
+  border: 7px solid #00ffc4;
+  border-radius: 7.4mm;
+}
+
+.closeBtnLog {
+  position: absolute;
+  right: -5%;
+  top: -5%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.closeBtnLog .fa-circle-xmark {
+  font-size: xx-large;
+  color: red;
+  transition: 0.4s;
+}
+.closeBtnLog .fa-circle-xmark:hover {
+  scale: 1.4;
+}
+
+.loginForm {
+  line-height: 70px;
+  width: 40vw;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 5px 10px;
+}
+
+.logLabel {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #00ffc4;
+}
+
+.logInp {
+  width: 25vw;
+  font-size: x-large;
+  background: #2a2a2a;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  border-bottom: 4px solid black;
+  transition: 0.4s;
+  color: #81ffd6;
+  font-weight: bolder;
+}
+.logInp:hover {
+  width: 30vw;
+  border-bottom: 4px solid #81ffd6;
+}
+.logInp:focus {
+  width: 30vw;
+  border-bottom: 4px solid #81ffd6;
+}
+
+.logSub {
+  border: none;
+  background-color: #2a2a2a;
+  font-size: xx-large;
+  font-weight: bold;
+  color: #00ffc4;
+  margin: 5vh 0px;
+  padding: 5px 10px;
+  border-radius: 2.4mm;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 2px solid #81ffd6;
+}
+.logSub:hover {
+  background-color: #00ffc4;
+  box-shadow: 0px 0px 20px #81ffd6;
+  color: black;
+}/*# sourceMappingURL=registr.css.map */

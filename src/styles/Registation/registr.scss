@@ -1,0 +1,80 @@
+$liColor: #2a2a2a;
+$titleColor: #00ffc4;
+$categoryColor: #007cfb;
+$colorinput:#81ffd6;
+// placeholder color for inputs
+::placeholder {
+    color: silver;
+  }
+@import '../defaults/defaults.scss';
+.login {
+    @include forms;
+}
+.signup {
+    @include forms;
+}
+.closeBtnLog{
+    position: absolute;
+    right: -5%;
+    top: -5%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    .fa-circle-xmark{
+        font-size: xx-large;
+        color: red;
+        transition: 0.4s;
+        &:hover{
+            scale: 1.4;
+        }
+    }
+}
+.loginForm{
+    line-height: 70px;
+    width: 40vw;
+    height: min-content;
+    padding: 5px 10px;
+}
+.logLabel{
+    font-size: xx-large;
+    font-weight: bold;
+    color: $titleColor;
+}
+.logInp{
+    width: 25vw;
+    font-size: x-large;
+    background: $liColor;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    border-bottom: 4px solid black;
+    transition: 0.4s;
+    color: $colorinput;
+    font-weight: bolder;
+    &:hover{
+        width: 30vw;
+        border-bottom: 4px solid $colorinput;
+    }
+    &:focus{
+        width: 30vw;
+        border-bottom: 4px solid $colorinput;
+    }
+}
+.logSub{
+    border: none;
+    background-color: $liColor;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #00ffc4;
+    margin: 5vh 0px;
+    padding: 5px 10px;
+    border-radius:2.4mm;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid $colorinput;
+    &:hover{
+        background-color: $titleColor;
+        box-shadow: 0px 0px 20px $colorinput;
+        color: black;
+    }
+}
