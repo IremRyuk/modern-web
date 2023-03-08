@@ -110,7 +110,7 @@
   border-radius: 2.4mm;
   cursor: pointer;
   transition: 0.2s;
-  border: 2px solid #81ffd6;
+  border: 2px solid #00ffc4;
 }
 .logSub:hover {
   background-color: #00ffc4;

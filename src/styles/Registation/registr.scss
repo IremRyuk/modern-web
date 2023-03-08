@@ -71,7 +71,7 @@ $colorinput:#81ffd6;
     border-radius:2.4mm;
     cursor: pointer;
     transition: 0.2s;
-    border: 2px solid $colorinput;
+    border: 2px solid #00ffc4;  
     &:hover{
         background-color: $titleColor;
         box-shadow: 0px 0px 20px $colorinput;
