@@ -39,7 +39,7 @@
   height: -moz-min-content;
   height: min-content;
   background: #2a2a2a;
-  overflow-x: none;
+  overflow-x: hidden;
 }
 
 .searchCall {
