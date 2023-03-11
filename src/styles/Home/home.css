@@ -29,7 +29,7 @@
 
 .mini-nav {
   position: absolute;
-  top: 0%;
+  top: 10%;
   left: 0%;
   width: 100vw;
   height: -webkit-min-content;
@@ -38,6 +38,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.4s;
+  opacity: 0;
 }
 
 .register {
@@ -105,7 +107,6 @@
   margin-left: 5%;
   transition: 0.4s;
   z-index: 20;
-  opacity: 0;
 }
 
 ul {

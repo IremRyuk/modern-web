@@ -52,9 +52,7 @@
 }
 
 .burgerBar {
-  position: absolute;
-  top: 5%;
-  right: 5%;
+  margin-right: 5%;
   z-index: 21;
   background: #2a2a2a;
   border: none;
@@ -100,7 +98,7 @@
   text-shadow: 0 0 10px #00ffc4;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   .boxLinks {
     display: none;
   }

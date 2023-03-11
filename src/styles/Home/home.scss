@@ -32,13 +32,15 @@ $categoryColor: #007cfb;
 // header
 .mini-nav{
     position:absolute;
-    top: 0%;
+    top: 10%;
     left: 0%;
     width: 100vw;
     height: min-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.4s;
+    opacity: 0;
 }
 .register{
     margin-right: 5%;
@@ -96,7 +98,6 @@ $categoryColor: #007cfb;
     margin-left: 5%;
     transition: 0.4s;
     z-index: 20;
-    opacity: 0;
 }
 // navigation menu
 ul {

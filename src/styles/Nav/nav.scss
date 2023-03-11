@@ -51,9 +51,7 @@ $categoryColor: #007cfb;
 }
 // mini screens 850<=px
 .burgerBar{
-    position: absolute;
-    top: 5%;
-    right: 5%;
+    margin-right: 5%;
     z-index: 21;
     background: $liColor;
     border: none;
@@ -94,7 +92,7 @@ $categoryColor: #007cfb;
     }
 }
 // resize
-@media screen and (max-width:850px) {
+@media screen and (max-width:1000px) {
     .boxLinks {
         display: none;
     }
