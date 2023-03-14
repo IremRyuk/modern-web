@@ -49,8 +49,8 @@ export default function Home() {
          <ul className='ul'>
             <li style={{'--i':5}} className='--i:5 li'><Link to='/shop'>Shop</Link></li>
             <li style={{'--i':4}} className='--i:4 li'><Link to='/Profile'>Profile</Link></li>
-            <li style={{'--i':3}} className='--i:3 li'><Link to=''>Jobs</Link></li>
-            <li style={{'--i':2}} className='--i:2 li'><Link to=''>Contact Us</Link></li>
+            <li style={{'--i':3}} className='--i:3 li'><Link to='/jobs'>Jobs</Link></li>
+            <li style={{'--i':2}} className='--i:2 li'><Link to='/contact'>Contact Us</Link></li>
             <li style={{'--i':1}} className='--i:1 li'><Link to=''>Report</Link></li>
         </ul>
 <div className='right'>

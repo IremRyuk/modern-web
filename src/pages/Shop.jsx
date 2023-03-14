@@ -2,8 +2,8 @@ import React, { useEffect, useReducer, useState } from 'react'
 import '../styles/Shop/shop.css'
 import Nav  from '../components/Nav'
 import CurrentItem from './CurrentItem'
-import { Initial_Values, reduce } from '../components/Values'
-import BottomInfo from './BottomInfo'
+import { Initial_Values, reduce } from '../components/InitialValues'
+import BottomInfo from '../components/BottomInfo'
 
 export default function Shop() {
     const [state,dispatch] = useReducer(reduce,Initial_Values)

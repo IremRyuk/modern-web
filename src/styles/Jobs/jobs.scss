@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+// colors for page
+$liColor: #2a2a2a;
+$titleColor: #00ffc4;
+$categoryColor: #007cfb;
+$colorFonts: rgb(0, 255, 191);
+.jobs {
+    width: 100vw;
+    height: min-content;
+    background: $liColor;
+}
+.first-part-elements {
+    margin-top: 100px;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+.jobs-image {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.jobs-form {
+    width: 40%;
+    height: min-content;
+    border: 5px solid rgb(71, 71, 71);
+    border-radius: 5.4mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+.labels {
+    color: $colorFonts;
+    font-size: large;
+}
+.labels-name {
+    color: $colorFonts;
+    font-size: large;
+    &::after {
+        content: ' *';
+        color: red;
+    }
+}
+.jobsSelect {
+    width: 40%;
+    height: fit-content;
+    font-size: x-large;
+    font-weight: bold;
+    transition: 0.2s;
+    outline: none;
+    border: 2px solid rgb(71, 71, 71);
+    border-radius: 1mm;
+    background-color: rgb(71, 71, 71);
+    text-transform: capitalize;
+    color: $colorFonts;
+    &:focus {
+        width: 70%;
+    }
+    option {
+        color: black;
+        border-radius: 1mm;
+        outline: none;
+        border: none;
+    }
+}
+
+// inputs
+.jobs-inp {
+    width: 50%;
+    font-size: x-large;
+    border: none;
+    border-radius: 1mm;
+    outline: none;
+    background: rgb(71, 71, 71);
+    color: $colorFonts;
+    padding: 5px 10px;
+    transition: 0.4s;
+    &:hover {
+        width: 80%;
+    }
+    &:focus {
+        width: 75%;
+    }
+}
+
+.jobsBtns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    // left btn reset
+    .resetBtn {
+        font-size: x-large;
+        border: none;
+        border-bottom: 2px solid red;
+        background-color: transparent;
+        color: red;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 5px 10px;
+        font-weight: 500;
+        &:hover {
+            background-color: red;
+            border-radius: 2.4mm;
+            box-shadow: 0 0 17px red;
+            color: black;
+        }
+    }
+    // right btn submit
+    .submitBtn {
+        font-size: x-large;
+        border: none;
+        border-bottom: 2px solid green;
+        background-color: transparent;
+        color: green;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 5px 10px;
+        font-weight: 500;
+        &:hover {
+            background-color: green;
+            border-radius: 2.4mm;
+            box-shadow: 0 0 17px green;
+            color: black;
+        }
+    }
+}
+// contact information
+.jobs-con{
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100vw;
+    height: min-content;
+    text-align: center;
+    background-color: $titleColor;
+    padding:10px 0px;
+    transition: 0.4s;
+    &:hover{
+        background-color:#46ffd4;
+    }
+    &:hover .jobs-con-tag{
+        transition: 0.2s;
+        font-weight: 700;
+    }
+}
+.jobs-con-tag{
+    width: 100%;
+    font-size: x-large;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+    .moments{
+        width: 100vw;
+    }
+}
+@media screen and (max-width:1300px) {
+    .jobs-inp {
+        width: 65%;
+        font-size: x-large;
+        &:hover {
+            width: 80%;
+        }
+        &:focus {
+            width: 85%;
+        }
+    }
+}
+@media screen and (max-width:1023px) {
+    .jobs-image {
+        display: none;
+    }
+    .first-part-elements {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .jobs-form {
+        width: 70%;
+    }
+}
+@media screen and (max-width:750px) {
+    .jobs-form {
+        width: 80%;
+    }
+    .jobsSelect {
+        width: 50%;
+        height: fit-content;
+        font-size: large;
+        &:focus {
+            width: 50%;
+        }
+        option {
+            color: black;
+            border-radius: 1mm;
+            outline: none;
+            border: none;
+        }
+    }
+    .jobs-inp {
+        width: 80%;
+        font-size: large;
+        &:hover {
+            width: 80%;
+        }
+        &:focus {
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width:500px) {
+    .jobs-form {
+        width: 90%;
+    }
+    .jobsSelect {
+        width: 60%;
+        &:focus{
+            width: 60%;
+        }
+    }
+    .jobs-inp {
+        width: 90%;
+    }
+    .jobsBtns {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .resetBtn {
+            font-size: large;
+            border-left: 2px solid red;
+            border-bottom: none;
+            border-right: 2px solid red;
+            border-radius: 2.4mm;
+            padding: 5px 30px;
+        }
+        .submitBtn{
+            font-size: large;
+            border-left: 2px solid green;
+            border-bottom: none;
+            border-right: 2px solid green;
+            border-radius: 2.4mm;
+            padding: 5px 30px;
+    }
+    }
+}
